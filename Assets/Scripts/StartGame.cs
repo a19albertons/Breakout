@@ -11,6 +11,11 @@ public class StartGame : MonoBehaviour
     [SerializeField] GameObject pelota;
     [SerializeField] float duration;
 
+    void Start()
+    {
+        Cursor.visible = false;
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
