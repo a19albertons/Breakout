@@ -10,32 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: Localization-Locales
+  m_Name: Localization-Assets-Shared
   m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
-  m_GroupName: Localization-Locales
-  m_GUID: c30662b73a952a389a6a80c4af0f8fda
+  m_GroupName: Localization-Assets-Shared
+  m_GUID: c6100b38362d58c9aaeb1a3bbfadc427
   m_SerializeEntries:
-  - m_GUID: 42df96c1fc6ffa14a8cb2ba0d0ee5b2a
-    m_Address: Spanish (es)
+  - m_GUID: 62e231585e03279a7ab8ad733e0112df
+    m_Address: Assets/Translate/Scene3 Shared Data.asset
     m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale
+    m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: b647cecfcba6a06b0b3d5fb8f40a3f7e
-    m_Address: English (en)
+  - m_GUID: a3ab5f3b5153d4388a9d2257f8c5358d
+    m_Address: Assets/Translate/Scene0 Shared Data.asset
     m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: f3d08a3b23beae0be846f72a007f9f52
-    m_Address: Galician (gl)
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale
+    m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 60e5f5eed7a832184b6a14cfab846b07, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: 99a27918ea85180efad403a8fcd82c89, type: 2}
-    - {fileID: 11400000, guid: 00129e9b66e167098a7815fdb1ca0c37, type: 2}
+    - {fileID: 11400000, guid: 65ca9146e04a3372b899dc48bb5da143, type: 2}
+    - {fileID: 11400000, guid: 5afee834cf7ce2c03b229ec25a994d03, type: 2}

@@ -10,32 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: Localization-Locales
+  m_Name: Localization-String-Tables-English (en)
   m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
-  m_GroupName: Localization-Locales
-  m_GUID: c30662b73a952a389a6a80c4af0f8fda
+  m_GroupName: Localization-String-Tables-English (en)
+  m_GUID: ea8f70fafab30f516b0ac944a824e713
   m_SerializeEntries:
-  - m_GUID: 42df96c1fc6ffa14a8cb2ba0d0ee5b2a
-    m_Address: Spanish (es)
+  - m_GUID: 00d722ff7a94cafe1a4b0fad49e32a21
+    m_Address: Scene3_en
     m_ReadOnly: 1
     m_SerializedLabels:
-    - Locale
+    - Locale-en
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: b647cecfcba6a06b0b3d5fb8f40a3f7e
-    m_Address: English (en)
+  - m_GUID: cd842d0a600470e90ab90b02c26031e9
+    m_Address: Scene0_en
     m_ReadOnly: 1
     m_SerializedLabels:
-    - Locale
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: f3d08a3b23beae0be846f72a007f9f52
-    m_Address: Galician (gl)
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale
+    - Locale-en
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 60e5f5eed7a832184b6a14cfab846b07, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: 99a27918ea85180efad403a8fcd82c89, type: 2}
-    - {fileID: 11400000, guid: 00129e9b66e167098a7815fdb1ca0c37, type: 2}
+    - {fileID: 11400000, guid: 0aafc17d2aff9f170bfc24a85735df70, type: 2}
+    - {fileID: 11400000, guid: 2385a8604c8775283aa5a63e44c63750, type: 2}
