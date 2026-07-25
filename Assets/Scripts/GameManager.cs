@@ -1,7 +1,10 @@
 using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using System.Runtime.CompilerServices;
 using TMPro;
+
+[assembly: InternalsVisibleTo("Tests")] // Es el de edit mode
 
 public class GameManager : MonoBehaviour
 {
@@ -20,5 +23,12 @@ public class GameManager : MonoBehaviour
         Lives = 3;
 
         SceneManager.LoadScene(0);
+    }
+
+    // Para reiniciar las puntuaciones y vidas sin recargar la escena, útil para los tests de EditMode
+    internal static void ResetState()
+    {
+        Score = 0;
+        Lives = 3;
     }
 }
