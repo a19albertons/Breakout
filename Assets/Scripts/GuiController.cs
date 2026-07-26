@@ -1,11 +1,17 @@
 using UnityEngine;
 using TMPro;
 
+/// <summary>
+/// Clase para controlar la interfaz gráfica del juego, mostrando la puntuación y las vidas restantes del jugador.
+/// </summary>
 public class GUIController : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI txtScore;
     [SerializeField] TextMeshProUGUI txtLives;
 
+    /// <summary>
+    /// Actualiza la interfaz gráfica del juego cada frame, mostrando la puntuación y las vidas restantes del jugador.
+    /// </summary>
     private void OnGUI()
     {
         // Actualizar el texto 

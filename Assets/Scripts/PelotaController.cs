@@ -2,6 +2,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 
+/// <summary>
+/// Clase para controlar el comportamiento de la pelota en el juego, incluyendo su lanzamiento, sonidos, colisiones iteracción con los bloques...
+/// </summary>
 public class PelotaController : MonoBehaviour
 {
     Rigidbody2D rb;
@@ -36,6 +39,9 @@ public class PelotaController : MonoBehaviour
     {"Ladrillo-Atravesable", 25},
     };
 
+    /// <summary>
+    /// Inicializa la pelota, obteniendo los componentes necesarios y lanzando la pelota después de un retraso especificado.
+    /// </summary>
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -45,11 +51,17 @@ public class PelotaController : MonoBehaviour
         Invoke("LanzarPelota", delay);
     }
 
+    /// <summary>
+    /// Actualiza el estado del juego cada frame. Actualmente no realiza ninguna acción, pero puede ser utilizado para futuras actualizaciones de la pelota.
+    /// </summary>
     void Update()
     {
 
     }
 
+    /// <summary>
+    /// Lanza la pelota desde el centro de la pantalla con una dirección aleatoria hacia abajo, aplicando una fuerza inicial para iniciar su movimiento.
+    /// </summary>
     private void LanzarPelota()
     {
         transform.position = Vector3.zero;
@@ -65,6 +77,10 @@ public class PelotaController : MonoBehaviour
 
 
 
+    /// <summary>
+    /// Gestiona las colisiones de la pelota con otros objetos, incluyendo ladrillos, paredes y la pala del jugador, actualizando la puntuación, vidas y reproduciendo sonidos según corresponda.
+    /// </summary>
+    /// <param name="other"></param>
     private void OnTriggerEnter2D(Collider2D other)
     {
         // Si atravesamos un ladrillo rojo atravesable 
@@ -108,6 +124,10 @@ public class PelotaController : MonoBehaviour
     }
 
 
+    /// <summary>
+    /// Destruye un ladrillo, actualiza la puntuación y verifica si se han destruido todos los ladrillos para pasar a la siguiente escena.
+    /// </summary>
+    /// <param name="obj"></param>
     void DestroyBrick(GameObject obj)
     {
         sfx.clip = sfxBrick;
@@ -131,6 +151,9 @@ public class PelotaController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Gestiona la transición a la siguiente escena del juego, reiniciando al inicio si se ha alcanzado la última escena.
+    /// </summary>
     void NextScene()
     {
         int nextId = sceneId + 1;
@@ -140,6 +163,11 @@ public class PelotaController : MonoBehaviour
         }
         SceneManager.LoadScene(nextId);
     }
+
+    /// <summary>
+    /// Gestiona las colisiones de la pelota con otros objetos, incluyendo ladrillos, paredes y la pala del jugador, actualizando la puntuación, vidas y reproduciendo sonidos según corresponda.
+    /// </summary>
+    /// <param name="other"></param>
     private void OnCollisionEnter2D(Collision2D other)
     {
         // Almacenamos la etiqueta del objeto con el que estamos colisionando
@@ -207,6 +235,10 @@ public class PelotaController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Gestiona la reducción o restauración del tamaño de la pala del jugador, ajustando su escala según el parámetro proporcionado.
+    /// </summary>
+    /// <param name="reducir"></param>
     public void HalvePaddle(bool reducir)
     {
         halved = reducir;

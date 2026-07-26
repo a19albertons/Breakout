@@ -1,6 +1,10 @@
 using UnityEngine;
 using System.Collections.Generic;
 
+/// <summary>
+/// Clase para controlar el comportamiento de la pelota en el juego, incluyendo su lanzamiento, sonidos, colisiones iteracción con los bloques...
+/// Se limita a la escena inicial
+/// </summary>
 public class PelotaController0 : MonoBehaviour
 {
     Rigidbody2D rb;
@@ -21,6 +25,9 @@ public class PelotaController0 : MonoBehaviour
     {"Ladrillo-Rojo", 25},
     };
 
+    /// <summary>
+    /// Inicializa la pelota, obteniendo los componentes necesarios y lanzando la pelota después de un retraso especificado.
+    /// </summary>
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -28,6 +35,9 @@ public class PelotaController0 : MonoBehaviour
         Invoke("LanzarPelota", delay);
     }
 
+    /// <summary>
+    /// Lanza la pelota al inicio del juego.
+    /// </summary>
     private void LanzarPelota()
     {
         transform.position = Vector3.zero;
@@ -40,18 +50,14 @@ public class PelotaController0 : MonoBehaviour
         rb.AddForce(dir * force, ForceMode2D.Impulse);
     }
 
-
-
-
-
-
+    /// <summary>
+    /// Gestiona las colisiones de la pelota con otros objetos para genera los sonidos exclusivamente de iteracciones
+    /// </summary>
+    /// <param name="other"></param>
     private void OnCollisionEnter2D(Collision2D other)
     {
         // Almacenamos la etiqueta del objeto con el que estamos colisionando
         string tag = other.gameObject.tag;
-
-
-
 
         if (tag == "Pala")
         {
