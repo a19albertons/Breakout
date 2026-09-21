@@ -41,6 +41,7 @@ jobs:
                   projectPath: .
                   # Indicamos a GameCI que ejecute tu script en lugar del Builder por defecto
                   buildMethod: DependencyChecker.UpdateDependencies
+                  targetPlatform: StandaloneLinux64
 
             # Filtra los cambios en el manifest.json y packages-lock.json para evitar PRs de ficheros .meta y otros temporales generados por Unity
             - name: Filtrar cambios de dependencias
