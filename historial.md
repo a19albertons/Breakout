@@ -1,5 +1,13 @@
 # Notas de desarrollo
-Breakout versión 1.1.4 esta disponible
+Breakout versión 1.1.6 esta disponible
+
+## Lanzamiento de mantenimiento:
+- Se corrigen errores menores
+
+---------------------------------
+
+# Notas de desarrollo
+Breakout versión 1.1.5 esta disponible
 
 ## Lanzamiento de mantenimiento:
 - Se corrigen errores menores
